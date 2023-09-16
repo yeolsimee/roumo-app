@@ -1,4 +1,4 @@
-package com.yeolsimee.roumo.roumo_flutter
+package com.yeolsimee.moneysaving
 
 import io.flutter.embedding.android.FlutterActivity
 
