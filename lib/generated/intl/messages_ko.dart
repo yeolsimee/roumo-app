@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "loginWithApple": MessageLookupByLibrary.simpleMessage("Apple로 로그인"),
+        "loginWithGoogle": MessageLookupByLibrary.simpleMessage("구글로 로그인"),
         "loginWithNaver": MessageLookupByLibrary.simpleMessage("네이버로 로그인")
       };
 }

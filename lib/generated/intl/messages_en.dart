@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "loginWithApple":
+            MessageLookupByLibrary.simpleMessage("Sign in with Apple"),
+        "loginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Login With Google"),
         "loginWithNaver":
             MessageLookupByLibrary.simpleMessage("Login With Naver")
       };

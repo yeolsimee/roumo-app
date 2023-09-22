@@ -1,3 +1,6 @@
 {
-  "loginWithNaver": "Login With Naver"
+  "@@locale": "en",
+  "loginWithNaver": "Login With Naver",
+  "loginWithGoogle": "Login With Google",
+  "loginWithApple": "Sign in with Apple"
 }

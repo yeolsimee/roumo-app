@@ -13,6 +13,9 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
+  /// Color: #E6E6EA
+  static const Color googleGray = Color(0xFFE6E6EA);
+
   /// Color: #03C75A
   static const Color naverGreen = Color(0xFF03C75A);
 }
