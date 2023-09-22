@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:roumo_flutter/screens/agreement/agreement_screen.dart';
 import 'package:roumo_flutter/screens/home/home_screen.dart';
 import 'package:roumo_flutter/screens/login/email_login_screen.dart';
@@ -25,4 +26,35 @@ class Routes {
     routineAdd: (context) => const RoutineAddScreen(),
     routineUpdate: (context) => const RoutineUpdateScreen(),
   };
+
+  static var pages = [
+    const MaterialPage(
+      key: ValueKey(splash),
+      child: SplashScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(login),
+      child: LoginScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(emailLogin),
+      child: EmailLoginScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(agreement),
+      child: AgreementScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(home),
+      child: HomeScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(routineAdd),
+      child: RoutineAddScreen(),
+    ),
+    const MaterialPage(
+      key: ValueKey(routineUpdate),
+      child: RoutineUpdateScreen(),
+    ),
+  ];
 }

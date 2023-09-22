@@ -50,12 +50,12 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hello World!`
-  String get helloWorld {
+  /// `Login With Naver`
+  String get loginWithNaver {
     return Intl.message(
-      'Hello World!',
-      name: 'helloWorld',
-      desc: 'The conventional newborn programmer greeting',
+      'Login With Naver',
+      name: 'loginWithNaver',
+      desc: '',
       args: [],
     );
   }

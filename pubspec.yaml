@@ -16,15 +16,45 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   intl: ^0.18.1
+  flutter_screenutil: ^5.9.0
+  sign_in_with_apple: ^5.0.0
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  very_good_analysis: ^5.1.0
 
 flutter:
   generate: true
   uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/fonts/Pretendard/Pretendard-Thin.otf
+          weight: 100
+        - asset: assets/fonts/Pretendard/Pretendard-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/Pretendard/Pretendard-Light.otf
+          weight: 300
+        - asset: assets/fonts/Pretendard/Pretendard-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Pretendard/Pretendard-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Pretendard/Pretendard-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Pretendard/Pretendard-Bold.otf
+          weight: 700
+
 flutter_intl:
   enabled: true
+flutter_gen:
+  colors:
+    inputs:
+      - assets/color/colors.xml
