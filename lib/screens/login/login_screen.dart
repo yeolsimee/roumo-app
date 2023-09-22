@@ -20,7 +20,9 @@ class LoginScreen extends StatelessWidget {
             85.verticalSpace,
             NaverButton(onClick: () {}),
             8.verticalSpace,
-            GoogleButon(onClick: () {}),
+            GoogleButon(onClick: () {
+
+            }),
             8.verticalSpace,
             SizedBox(
               width: 319.w,

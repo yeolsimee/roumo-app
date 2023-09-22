@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       ensureScreenSize: true,
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routerConfig: Routes.router,
         title: 'ROUMO',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -38,17 +39,22 @@ class MyApp extends StatelessWidget {
           Locale('en', 'US'),
           Locale('ko', 'KR'),
         ],
-        home: Navigator(
-          onGenerateInitialRoutes: (navigator, initialRoute) => [
-            MaterialPageRoute(
-              builder: (context) => const LoginScreen(),
-            ),
-          ],
-          initialRoute: Routes.login,
-          pages: Routes.pages,
-          onPopPage: (route, result) => route.didPop(result),
-        ),
       ),
     );
+  }
+
+  Route<dynamic>? onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case Routes.splash:
+        return MaterialPageRoute(
+          builder: (context) => const SplashScreen(),
+        );
+      case Routes.login:
+        return MaterialPageRoute(
+          builder: (context) => const LoginScreen(),
+        );
+
+    }
+    return null;
   }
 }
