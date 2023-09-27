@@ -15,6 +15,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/google.svg
   String get google => 'assets/images/google.svg';
 
+  /// File path: assets/images/loading_image.png
+  AssetGenImage get loadingImage =>
+      const AssetGenImage('assets/images/loading_image.png');
+
   /// File path: assets/images/login_image.png
   AssetGenImage get loginImage =>
       const AssetGenImage('assets/images/login_image.png');
@@ -23,7 +27,7 @@ class $AssetsImagesGen {
   String get naver => 'assets/images/naver.svg';
 
   /// List of all assets
-  List<dynamic> get values => [google, loginImage, naver];
+  List<dynamic> get values => [google, loadingImage, loginImage, naver];
 }
 
 class Assets {

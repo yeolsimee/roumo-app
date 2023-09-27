@@ -14,12 +14,38 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  # UI
   cupertino_icons: ^1.0.2
-  intl: ^0.18.1
   flutter_screenutil: ^5.9.0
-  sign_in_with_apple: ^5.0.0
   flutter_svg: ^2.0.7
+
+  # State Management
+  flutter_riverpod: ^2.4.1
+  equatable: ^2.0.5
+  freezed: ^2.3.5
+  freezed_annotation: ^2.2.0
+
+  # Network
+  dio: ^5.3.3
+
+  # Social Login
+  google_sign_in: ^6.1.5
+  flutter_naver_login: ^1.8.0
+  sign_in_with_apple: ^5.0.0
+
+  # Route
   go_router: ^11.0.0
+
+  # Utils
+  intl: ^0.18.1
+  logger:
+
+  # Firebase
+  firebase_core: ^2.16.0
+  firebase_auth: ^4.10.0
+
+  # Local Storage
+  shared_preferences: ^2.1.2
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +53,8 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
   very_good_analysis: ^5.1.0
+  build_runner: ^2.4.6
+  json_serializable:
 
 flutter:
   generate: true

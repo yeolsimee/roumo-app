@@ -1,16 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:roumo_flutter/entity/result.dart';
 import 'package:roumo_flutter/gen/assets.gen.dart';
 import 'package:roumo_flutter/gen/colors.gen.dart';
+import 'package:roumo_flutter/provider/login/login_provider.dart';
+import 'package:roumo_flutter/provider/login/login_type.dart';
+import 'package:roumo_flutter/routes.dart';
+import 'package:roumo_flutter/ui/loading_full.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen(loginProvider, (previous, next) {
+      if (next is Success) {
+        context.go(Routes.agreement);
+      }
+    });
+
+    final loginResult = ref.watch(loginProvider);
+
+    if (loginResult is Loading) {
+      return const LoadingFullScreen();
+    }
+
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -20,9 +39,11 @@ class LoginScreen extends StatelessWidget {
             85.verticalSpace,
             NaverButton(onClick: () {}),
             8.verticalSpace,
-            GoogleButon(onClick: () {
-
-            }),
+            GoogleButon(
+              onClick: () {
+                ref.read(loginProvider.notifier).login(LoginType.google);
+              },
+            ),
             8.verticalSpace,
             SizedBox(
               width: 319.w,
