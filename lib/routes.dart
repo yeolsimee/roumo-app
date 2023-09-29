@@ -12,17 +12,17 @@ class Routes {
   static const splash = '/splash';
   static const login = '/login';
 
-  static const emailLogin = '/email_login';
+  static const emailLogin = '/login/email_login';
   static const _emailLogin = 'email_login';
 
-  static const agreement = '/agreement';
+  static const agreement = '/login/agreement';
   static const _agreement = 'agreement';
 
   static const home = '/home';
 
-  static const routineAdd = '/routine_add';
+  static const routineAdd = '/home/routine_add';
   static const _routineAdd = 'routine_add';
-  static const routineUpdate = '/routine_update';
+  static const routineUpdate = '/home/routine_update';
   static const _routineUpdate = 'routine_update';
 
   static final GoRouter router = GoRouter(
