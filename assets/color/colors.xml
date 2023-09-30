@@ -2,4 +2,11 @@
 <resources>
     <color name="naverGreen">#03C75A</color>
     <color name="googleGray">#E6E6EA</color>
+
+    <color name="black0B">#0B0B0B</color>
+    <color name="black33">#333333</color>
+
+    <color name="grey99">#999999</color>
+    <color name="grey66">#666666</color>
+    <color name="greyF0">#F0F0F0</color>
 </resources>

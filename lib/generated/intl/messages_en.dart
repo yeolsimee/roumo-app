@@ -22,6 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agree1":
+            MessageLookupByLibrary.simpleMessage("Agree to the Service Terms"),
+        "agree2":
+            MessageLookupByLibrary.simpleMessage("Agree to the Privacy Policy"),
+        "agreeAll": MessageLookupByLibrary.simpleMessage("Agree to all"),
+        "agreeAndContinue":
+            MessageLookupByLibrary.simpleMessage("Agree and Continue"),
+        "agreementTitle":
+            MessageLookupByLibrary.simpleMessage("Terms of Service"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Sign in with Apple"),
         "loginWithGoogle":

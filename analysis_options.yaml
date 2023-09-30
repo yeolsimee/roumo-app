@@ -3,3 +3,5 @@ linter:
   rules:
     public_member_api_docs: false
     sort_pub_dependencies: false
+    avoid_positional_boolean_parameters: false
+    non_constant_identifier_names: false

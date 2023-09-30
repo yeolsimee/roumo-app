@@ -22,6 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agree1": MessageLookupByLibrary.simpleMessage("서비스 이용 약관"),
+        "agree2": MessageLookupByLibrary.simpleMessage("개인 정보 처리 방침"),
+        "agreeAll": MessageLookupByLibrary.simpleMessage("전체동의"),
+        "agreeAndContinue": MessageLookupByLibrary.simpleMessage("동의하고 계속하기"),
+        "agreementTitle": MessageLookupByLibrary.simpleMessage("이용약관에 동의해주세요"),
         "loginWithApple": MessageLookupByLibrary.simpleMessage("Apple로 로그인"),
         "loginWithGoogle": MessageLookupByLibrary.simpleMessage("구글로 로그인"),
         "loginWithNaver": MessageLookupByLibrary.simpleMessage("네이버로 로그인")

@@ -79,6 +79,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Terms of Service`
+  String get agreementTitle {
+    return Intl.message(
+      'Terms of Service',
+      name: 'agreementTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agree to all`
+  String get agreeAll {
+    return Intl.message(
+      'Agree to all',
+      name: 'agreeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agree to the Service Terms`
+  String get agree1 {
+    return Intl.message(
+      'Agree to the Service Terms',
+      name: 'agree1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agree to the Privacy Policy`
+  String get agree2 {
+    return Intl.message(
+      'Agree to the Privacy Policy',
+      name: 'agree2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agree and Continue`
+  String get agreeAndContinue {
+    return Intl.message(
+      'Agree and Continue',
+      name: 'agreeAndContinue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

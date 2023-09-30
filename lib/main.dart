@@ -27,7 +27,10 @@ Future<void> main() async {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: FontFamily.pretendard,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.deepPurple,
+              background: Colors.white,
+            ),
             useMaterial3: true,
           ),
           localizationsDelegates: const [

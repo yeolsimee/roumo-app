@@ -15,6 +15,18 @@ class $AssetsImagesGen {
   /// File path: assets/images/google.svg
   String get google => 'assets/images/google.svg';
 
+  /// File path: assets/images/icon_arrow_open.svg
+  String get iconArrowOpen => 'assets/images/icon_arrow_open.svg';
+
+  /// File path: assets/images/icon_backarrow.svg
+  String get iconBackarrow => 'assets/images/icon_backarrow.svg';
+
+  /// File path: assets/images/icon_check.svg
+  String get iconCheck => 'assets/images/icon_check.svg';
+
+  /// File path: assets/images/icon_nonecheck.svg
+  String get iconNonecheck => 'assets/images/icon_nonecheck.svg';
+
   /// File path: assets/images/loading_image.png
   AssetGenImage get loadingImage =>
       const AssetGenImage('assets/images/loading_image.png');
@@ -27,7 +39,16 @@ class $AssetsImagesGen {
   String get naver => 'assets/images/naver.svg';
 
   /// List of all assets
-  List<dynamic> get values => [google, loadingImage, loginImage, naver];
+  List<dynamic> get values => [
+        google,
+        iconArrowOpen,
+        iconBackarrow,
+        iconCheck,
+        iconNonecheck,
+        loadingImage,
+        loginImage,
+        naver
+      ];
 }
 
 class Assets {

@@ -2,5 +2,10 @@
   "@@locale": "en",
   "loginWithNaver": "Login With Naver",
   "loginWithGoogle": "Login With Google",
-  "loginWithApple": "Sign in with Apple"
+  "loginWithApple": "Sign in with Apple",
+  "agreementTitle": "Terms of Service",
+  "agreeAll": "Agree to all",
+  "agree1": "Agree to the Service Terms",
+  "agree2": "Agree to the Privacy Policy",
+  "agreeAndContinue": "Agree and Continue"
 }
