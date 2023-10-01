@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:roumo_flutter/entity/result.dart';
+import 'package:roumo_flutter/entity/user/roumo_user.dart';
 import 'package:roumo_flutter/gen/assets.gen.dart';
 import 'package:roumo_flutter/gen/colors.gen.dart';
 import 'package:roumo_flutter/provider/login/login_provider.dart';
@@ -20,7 +21,15 @@ class LoginScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen(loginProvider, (previous, next) {
       if (next is Success) {
-        context.go(Routes.agreement);
+        next.mapOrNull(
+          success: (Success<RoumoUser> data) {
+            if (data.data.isNewUser == 'N') {
+              context.go(Routes.home);
+            } else {
+              context.go(Routes.agreement);
+            }
+          },
+        );
       }
     });
 

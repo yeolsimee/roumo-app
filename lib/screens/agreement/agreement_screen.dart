@@ -28,6 +28,7 @@ class AgreementScreen extends ConsumerWidget {
     });
 
     if (ref.watch(signUpProvider) is Loading) {
+      ref.read(agreementCheckStateProvider.notifier).reset();
       return const LoadingFullScreen();
     }
 

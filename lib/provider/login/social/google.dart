@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:roumo_flutter/utils/logger.dart';
 
@@ -59,14 +58,14 @@ class Google {
   ) async =>
       FirebaseAuth.instance.signInWithCredential(credential);
 
-  static void logout(BuildContext context, void Function() callback) =>
+  static void logout({void Function()? callback}) =>
       GoogleSignIn(scopes: ['email']).signOut().then((value) {
-        firebaseLogout(context, callback);
+        firebaseLogout(callback: callback);
       });
 }
 
-void firebaseLogout(BuildContext context, void Function() callback) {
+void firebaseLogout({void Function()? callback}) {
   FirebaseAuth.instance.signOut().then((_) {
-    callback();
+    callback?.call();
   });
 }

@@ -27,8 +27,8 @@ class AgreementCheckStateNotifier extends StateNotifier<AgreementCheckState> {
     );
   }
 
-  void signUp() {
-
+  Future<void> reset() async {
+    await Future.microtask(() => state = const AgreementCheckState());
   }
 }
 

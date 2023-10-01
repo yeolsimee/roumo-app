@@ -15,27 +15,13 @@ final dioProvider = FutureProvider<Dio>((ref) async {
       ),
     );
   }
-  final firebaseToken = await currentUser.getIdToken();
+  final firebaseToken = await currentUser.getIdToken(true);
   unawaited(Clipboard.setData(ClipboardData(text: firebaseToken ?? '')));
 
-  final dio = Dio(
+  return Dio(
     BaseOptions(
       baseUrl: apiServerBaseUrl,
       headers: {'x-auth': firebaseToken, 'Content-Type': 'application/json'},
     ),
-  )..interceptors.add(InterceptorsWrapper(
-    onError: (error, handler) {
-      if (error.response?.statusCode == 401) {
-        FirebaseAuth.instance.signOut();
-      }
-      return handler.next(error);
-    },
-    onResponse: (response, handler) {
-      if (response.statusCode == 401) {
-        FirebaseAuth.instance.signOut();
-      }
-      return handler.next(response);
-    },
-  ));
-  return dio;
+  );
 });

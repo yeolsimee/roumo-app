@@ -45,8 +45,15 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
     );
   }
 
-  void logout() {
-    state = const Result.empty();
+  void logout({void Function()? callback}) {
+    FirebaseAuth.instance.signOut().then(
+          (value) => Google.logout(
+            callback: () {
+              state = const Result.empty();
+              callback?.call();
+            },
+          ),
+        );
   }
 
   // ignore: avoid_positional_boolean_parameters
@@ -54,7 +61,7 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
     if (isSuccess) {
       userApi.when(
         data: (api) async {
-          state = await api.login();
+          state = await api.firstLogin();
         },
         loading: () {
           state = const Result.loading();
@@ -71,9 +78,19 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
 
   void autoLogin() {
     if (FirebaseAuth.instance.currentUser != null) {
-      sendResult(true);
+      userApi.when(
+        data: (api) async {
+          state = await api.login();
+        },
+        loading: () {
+          state = const Result.loading();
+        },
+        error: (e, s) {
+          state = const Result.error('로그인 실패');
+        },
+      );
     } else {
-      state = const Result.empty();
+      state = const Result.error('로그인 정보 없음');
     }
   }
 }

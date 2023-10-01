@@ -18,24 +18,50 @@ class UserApi {
 
   final Dio _dio;
 
-  Future<Result<RoumoUser>> login() async {
-    final response = await _dio.post<dynamic>(
-      '/login',
-    );
-    if (response.statusCode == 200) {
-      final body = response.data;
-      final data = ApiResponse.fromDynamic(body).data;
-      Log.i(data);
-      return Result.success(RoumoUser.fromJson(data));
+  Future<Result<RoumoUser>> firstLogin() async {
+    try {
+      final response = await _dio.post<dynamic>(
+        '/login',
+      );
+      if (response.statusCode == 200) {
+        final body = response.data;
+        final data = ApiResponse.fromDynamic(body).data;
+        Log.i(data);
+        return Result.success(RoumoUser.fromJson(data));
+      }
+      Log.e(response);
+      return const Result.error('로그인에 실패했습니다.');
+    } catch (error) {
+      Log.e(error);
+      return const Result.error('로그인에 실패했습니다.');
     }
-    Log.e(response);
-    return const Result.error('로그인에 실패했습니다.');
+  }
+
+  Future<Result<RoumoUser>> login() async {
+    try {
+      final response = await _dio.post<dynamic>(
+        '/login',
+      );
+      if (response.statusCode == 200) {
+        final body = response.data;
+        final data = ApiResponse.fromDynamic(body).data;
+        final roumoUser = RoumoUser.fromJson(data);
+        if (roumoUser.isNewUser == 'N') {
+          return Result.success(roumoUser);
+        }
+      }
+      Log.e(response);
+      return const Result.error('로그인에 실패했습니다.');
+    } catch (error) {
+      Log.e(error);
+      return const Result.error('로그인에 실패했습니다.');
+    }
   }
 
   Future<Result<ApiUser>> signUp() async {
     final response = await _dio.post<dynamic>(
       '/isnewuser/update',
-      data: {'isNewUser': 'Y'},
+      data: {'isNewUser': 'N'},
     );
     if (response.statusCode == 200) {
       final body = response.data;
