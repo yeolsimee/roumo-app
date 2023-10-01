@@ -26,6 +26,10 @@ class AgreementCheckStateNotifier extends StateNotifier<AgreementCheckState> {
       isPrivacyAgree: !isAllAgree,
     );
   }
+
+  void signUp() {
+
+  }
 }
 
 class AgreementCheckState {

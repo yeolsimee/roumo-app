@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:roumo_flutter/const/url_consts.dart';
+import 'package:roumo_flutter/entity/result.dart';
+import 'package:roumo_flutter/entity/user/api_user.dart';
 import 'package:roumo_flutter/gen/assets.gen.dart';
 import 'package:roumo_flutter/gen/colors.gen.dart';
+import 'package:roumo_flutter/provider/sign_up/sign_up_provider.dart';
+import 'package:roumo_flutter/routes.dart';
 import 'package:roumo_flutter/screens/agreement/check_state_notifier.dart';
+import 'package:roumo_flutter/ui/loading_full.dart';
 import 'package:roumo_flutter/ui/text_style.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -15,6 +21,16 @@ class AgreementScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen(signUpProvider, (previous, Result<ApiUser> next) {
+      if (next is Success) {
+        context.go(Routes.home);
+      }
+    });
+
+    if (ref.watch(signUpProvider) is Loading) {
+      return const LoadingFullScreen();
+    }
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -124,23 +140,29 @@ class AgreementScreen extends ConsumerWidget {
     final bottomPadding = MediaQuery.of(context).padding.bottom;
 
     final provider = ref.watch(agreementCheckStateProvider);
-
     final isAllAgree = provider.isAllAgree();
 
-    return Container(
-      height: 66.h + bottomPadding,
-      color: isAllAgree ? ColorName.black0B : ColorName.grey99,
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: SizedBox(
-          width: double.infinity,
-          height: 66.h,
-          child: Center(
-            child: Text(
-              Intl.message('agreeAndContinue'),
-              textAlign: TextAlign.center,
-              style: style16Bold.copyWith(
-                color: Colors.white,
+    return GestureDetector(
+      onTap: () {
+        if (isAllAgree) {
+          ref.read(signUpProvider.notifier).signUp();
+        }
+      },
+      child: Container(
+        height: 66.h + bottomPadding,
+        color: isAllAgree ? ColorName.black0B : ColorName.grey99,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: SizedBox(
+            width: double.infinity,
+            height: 66.h,
+            child: Center(
+              child: Text(
+                Intl.message('agreeAndContinue'),
+                textAlign: TextAlign.center,
+                style: style16Bold.copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
