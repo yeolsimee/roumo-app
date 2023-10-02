@@ -1,10 +1,15 @@
+import 'dart:async';
+
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roumo_flutter/entity/api_response.dart';
 import 'package:roumo_flutter/entity/result.dart';
 import 'package:roumo_flutter/entity/user/api_user.dart';
 import 'package:roumo_flutter/entity/user/roumo_user.dart';
 import 'package:roumo_flutter/provider/api_provider.dart';
+import 'package:roumo_flutter/provider/firebase/firebase_provider.dart';
 import 'package:roumo_flutter/utils/logger.dart';
 
 final userApiProvider = FutureProvider<UserApi>((ref) async {
@@ -19,9 +24,12 @@ class UserApi {
   final Dio _dio;
 
   Future<Result<RoumoUser>> firstLogin() async {
+    final firebaseToken = await getFirebaseToken();
+
     try {
       final response = await _dio.post<dynamic>(
         '/login',
+        options: Options(headers: {'x-auth': firebaseToken})
       );
       if (response.statusCode == 200) {
         final body = response.data;

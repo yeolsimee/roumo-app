@@ -23,7 +23,7 @@ class AgreementScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen(signUpProvider, (previous, Result<ApiUser> next) {
       if (next is Success) {
-        context.go(Routes.home);
+        context.go(Routes.main);
       }
     });
 

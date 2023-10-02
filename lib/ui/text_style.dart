@@ -22,3 +22,24 @@ final style15Normal = TextStyle(
   fontWeight: FontWeight.w500,
   letterSpacing: -0.1.sp,
 );
+
+final style10Bold = TextStyle(
+  color: Colors.white,
+  fontSize: 10.sp,
+  fontWeight: FontWeight.w700,
+  letterSpacing: -0.1.sp,
+);
+
+final style10Normal = TextStyle(
+  color: ColorName.grey99,
+  fontSize: 10.sp,
+  fontWeight: FontWeight.w500,
+  letterSpacing: -0.1.sp,
+);
+
+final styleOfMyPageText = TextStyle(
+  color: ColorName.grey900,
+  fontSize: 15.sp,
+  fontWeight: FontWeight.w600,
+  letterSpacing: -0.2.sp,
+);

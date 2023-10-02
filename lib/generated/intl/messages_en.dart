@@ -31,11 +31,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Agree and Continue"),
         "agreementTitle":
             MessageLookupByLibrary.simpleMessage("Terms of Service"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Sign in with Apple"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login With Google"),
         "loginWithNaver":
-            MessageLookupByLibrary.simpleMessage("Login With Naver")
+            MessageLookupByLibrary.simpleMessage("Login With Naver"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "myPage": MessageLookupByLibrary.simpleMessage("My Page"),
+        "notice": MessageLookupByLibrary.simpleMessage("Notice"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "routineRecommend": MessageLookupByLibrary.simpleMessage("Recommend"),
+        "terms_of_service":
+            MessageLookupByLibrary.simpleMessage("Terms of Service")
       };
 }

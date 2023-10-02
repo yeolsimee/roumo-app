@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:roumo_flutter/screens/agreement/agreement_screen.dart';
-import 'package:roumo_flutter/screens/home/home_screen.dart';
 import 'package:roumo_flutter/screens/login/email_login_screen.dart';
 import 'package:roumo_flutter/screens/login/login_screen.dart';
-import 'package:roumo_flutter/screens/routine/routine_add_screen.dart';
-import 'package:roumo_flutter/screens/routine/routine_update_screen.dart';
+import 'package:roumo_flutter/screens/main/home/home_screen.dart';
+import 'package:roumo_flutter/screens/main/main_view.dart';
+import 'package:roumo_flutter/screens/main/routine/routine_add_screen.dart';
+import 'package:roumo_flutter/screens/main/routine/routine_update_screen.dart';
 import 'package:roumo_flutter/screens/splash/splash_screen.dart';
 
 class Routes {
@@ -18,11 +19,11 @@ class Routes {
   static const agreement = '/login/agreement';
   static const _agreement = 'agreement';
 
-  static const home = '/home';
+  static const main = '/main';
 
-  static const routineAdd = '/home/routine_add';
+  static const routineAdd = '/main/routine_add';
   static const _routineAdd = 'routine_add';
-  static const routineUpdate = '/home/routine_update';
+  static const routineUpdate = '/main/routine_update';
   static const _routineUpdate = 'routine_update';
 
   static final GoRouter router = GoRouter(
@@ -54,9 +55,9 @@ class Routes {
         ],
       ),
       GoRoute(
-        path: Routes.home,
+        path: Routes.main,
         builder: (context, state) {
-          return const HomeScreen();
+          return const MainView();
         },
         routes: <RouteBase>[
           GoRoute(
@@ -75,6 +76,5 @@ class Routes {
       ),
     ],
   );
-
 }
 

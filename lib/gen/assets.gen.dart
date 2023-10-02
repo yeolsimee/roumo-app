@@ -25,6 +25,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/google.svg
   String get google => 'assets/images/google.svg';
 
+  /// File path: assets/images/home_logo.png
+  AssetGenImage get homeLogo =>
+      const AssetGenImage('assets/images/home_logo.png');
+
   /// File path: assets/images/icon_arrow_open.svg
   String get iconArrowOpen => 'assets/images/icon_arrow_open.svg';
 
@@ -34,8 +38,26 @@ class $AssetsImagesGen {
   /// File path: assets/images/icon_check.svg
   String get iconCheck => 'assets/images/icon_check.svg';
 
+  /// File path: assets/images/icon_home_off.svg
+  String get iconHomeOff => 'assets/images/icon_home_off.svg';
+
+  /// File path: assets/images/icon_home_on.svg
+  String get iconHomeOn => 'assets/images/icon_home_on.svg';
+
+  /// File path: assets/images/icon_mypage_off.svg
+  String get iconMypageOff => 'assets/images/icon_mypage_off.svg';
+
+  /// File path: assets/images/icon_mypage_on.svg
+  String get iconMypageOn => 'assets/images/icon_mypage_on.svg';
+
   /// File path: assets/images/icon_nonecheck.svg
   String get iconNonecheck => 'assets/images/icon_nonecheck.svg';
+
+  /// File path: assets/images/icon_routine_off.svg
+  String get iconRoutineOff => 'assets/images/icon_routine_off.svg';
+
+  /// File path: assets/images/icon_routine_on.svg
+  String get iconRoutineOn => 'assets/images/icon_routine_on.svg';
 
   /// File path: assets/images/loading_image.png
   AssetGenImage get loadingImage =>
@@ -48,16 +70,36 @@ class $AssetsImagesGen {
   /// File path: assets/images/naver.svg
   String get naver => 'assets/images/naver.svg';
 
+  /// File path: assets/images/small_right_arrow.png
+  AssetGenImage get smallRightArrow =>
+      const AssetGenImage('assets/images/small_right_arrow.png');
+
+  /// File path: assets/images/toggle_off.svg
+  String get toggleOff => 'assets/images/toggle_off.svg';
+
+  /// File path: assets/images/toggle_on.svg
+  String get toggleOn => 'assets/images/toggle_on.svg';
+
   /// List of all assets
   List<dynamic> get values => [
         google,
+        homeLogo,
         iconArrowOpen,
         iconBackarrow,
         iconCheck,
+        iconHomeOff,
+        iconHomeOn,
+        iconMypageOff,
+        iconMypageOn,
         iconNonecheck,
+        iconRoutineOff,
+        iconRoutineOn,
         loadingImage,
         loginImage,
-        naver
+        naver,
+        smallRightArrow,
+        toggleOff,
+        toggleOn
       ];
 }
 

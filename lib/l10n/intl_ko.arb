@@ -7,5 +7,12 @@
   "agreeAll": "전체동의",
   "agree1": "서비스 이용 약관",
   "agree2": "개인 정보 처리 방침",
-  "agreeAndContinue": "동의하고 계속하기"
+  "agreeAndContinue": "동의하고 계속하기",
+  "home": "홈",
+  "routineRecommend": "루틴 추천",
+  "myPage": "내정보",
+  "notice": "알림",
+  "terms_of_service": "이용 약관",
+  "privacy_policy": "개인정보 처리방침",
+  "logout": "로그아웃"
 }

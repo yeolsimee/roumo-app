@@ -26,7 +26,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   Widget build(BuildContext context) {
     ref.listen(loginProvider, (previous, next) {
       if (next is Success) {
-        context.go(Routes.home);
+        context.go(Routes.main);
       } else {
         context.go(Routes.login);
       }

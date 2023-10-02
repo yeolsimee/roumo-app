@@ -7,5 +7,12 @@
   "agreeAll": "Agree to all",
   "agree1": "Agree to the Service Terms",
   "agree2": "Agree to the Privacy Policy",
-  "agreeAndContinue": "Agree and Continue"
+  "agreeAndContinue": "Agree and Continue",
+  "home": "Home",
+  "routineRecommend": "Recommend",
+  "myPage": "My Page",
+  "notice": "Notice",
+  "terms_of_service": "Terms of Service",
+  "privacy_policy": "Privacy Policy",
+  "logout": "Logout"
 }

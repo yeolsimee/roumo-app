@@ -24,7 +24,7 @@ class LoginScreen extends ConsumerWidget {
         next.mapOrNull(
           success: (Success<RoumoUser> data) {
             if (data.data.isNewUser == 'N') {
-              context.go(Routes.home);
+              context.go(Routes.main);
             } else {
               context.go(Routes.agreement);
             }
@@ -48,7 +48,7 @@ class LoginScreen extends ConsumerWidget {
             85.verticalSpace,
             NaverButton(onClick: () {}),
             8.verticalSpace,
-            GoogleButon(
+            GoogleButton(
               onClick: () {
                 ref.read(loginProvider.notifier).login(LoginType.google);
               },
@@ -106,7 +106,7 @@ class LoginScreen extends ConsumerWidget {
     );
   }
 
-  Widget GoogleButon({required Null Function() onClick}) {
+  Widget GoogleButton({required Null Function() onClick}) {
     return GestureDetector(
       onTap: onClick,
       child: Container(

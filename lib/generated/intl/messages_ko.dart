@@ -27,8 +27,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "agreeAll": MessageLookupByLibrary.simpleMessage("전체동의"),
         "agreeAndContinue": MessageLookupByLibrary.simpleMessage("동의하고 계속하기"),
         "agreementTitle": MessageLookupByLibrary.simpleMessage("이용약관에 동의해주세요"),
+        "home": MessageLookupByLibrary.simpleMessage("홈"),
         "loginWithApple": MessageLookupByLibrary.simpleMessage("Apple로 로그인"),
         "loginWithGoogle": MessageLookupByLibrary.simpleMessage("구글로 로그인"),
-        "loginWithNaver": MessageLookupByLibrary.simpleMessage("네이버로 로그인")
+        "loginWithNaver": MessageLookupByLibrary.simpleMessage("네이버로 로그인"),
+        "logout": MessageLookupByLibrary.simpleMessage("로그아웃"),
+        "myPage": MessageLookupByLibrary.simpleMessage("내정보"),
+        "notice": MessageLookupByLibrary.simpleMessage("알림"),
+        "privacy_policy": MessageLookupByLibrary.simpleMessage("개인정보 처리방침"),
+        "routineRecommend": MessageLookupByLibrary.simpleMessage("루틴 추천"),
+        "terms_of_service": MessageLookupByLibrary.simpleMessage("이용 약관")
       };
 }
