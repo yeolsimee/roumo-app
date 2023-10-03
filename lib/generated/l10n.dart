@@ -199,6 +199,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Leave`
+  String get memberLeave {
+    return Intl.message(
+      'Leave',
+      name: 'memberLeave',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you leave, all data will be deleted.`
+  String get memberLeaveDetail {
+    return Intl.message(
+      'If you leave, all data will be deleted.',
+      name: 'memberLeaveDetail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get giveUp {
+    return Intl.message(
+      'Cancel',
+      name: 'giveUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to log out?`
+  String get logoutMessage {
+    return Intl.message(
+      'Are you sure you want to log out?',
+      name: 'logoutMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Plan to update`
+  String get plan_to_update {
+    return Intl.message(
+      'Plan to update',
+      name: 'plan_to_update',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We are preparing to update the service. Please wait a little longer.`
+  String get plan_to_update_detail {
+    return Intl.message(
+      'We are preparing to update the service. Please wait a little longer.',
+      name: 'plan_to_update_detail',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -70,6 +70,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/naver.svg
   String get naver => 'assets/images/naver.svg';
 
+  /// File path: assets/images/ready_image.png
+  AssetGenImage get readyImage =>
+      const AssetGenImage('assets/images/ready_image.png');
+
   /// File path: assets/images/small_right_arrow.png
   AssetGenImage get smallRightArrow =>
       const AssetGenImage('assets/images/small_right_arrow.png');
@@ -97,6 +101,7 @@ class $AssetsImagesGen {
         loadingImage,
         loginImage,
         naver,
+        readyImage,
         smallRightArrow,
         toggleOff,
         toggleOn

@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Agree and Continue"),
         "agreementTitle":
             MessageLookupByLibrary.simpleMessage("Terms of Service"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "giveUp": MessageLookupByLibrary.simpleMessage("Cancel"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Sign in with Apple"),
@@ -39,8 +41,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginWithNaver":
             MessageLookupByLibrary.simpleMessage("Login With Naver"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "logoutMessage": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to log out?"),
+        "memberLeave": MessageLookupByLibrary.simpleMessage("Leave"),
+        "memberLeaveDetail": MessageLookupByLibrary.simpleMessage(
+            "If you leave, all data will be deleted."),
         "myPage": MessageLookupByLibrary.simpleMessage("My Page"),
         "notice": MessageLookupByLibrary.simpleMessage("Notice"),
+        "plan_to_update":
+            MessageLookupByLibrary.simpleMessage("Plan to update"),
+        "plan_to_update_detail": MessageLookupByLibrary.simpleMessage(
+            "We are preparing to update the service. Please wait a little longer."),
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "routineRecommend": MessageLookupByLibrary.simpleMessage("Recommend"),

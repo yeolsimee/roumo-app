@@ -58,14 +58,12 @@ class Google {
   ) async =>
       FirebaseAuth.instance.signInWithCredential(credential);
 
-  static void logout({void Function()? callback}) =>
-      GoogleSignIn(scopes: ['email']).signOut().then((value) {
-        firebaseLogout(callback: callback);
-      });
+  static Future<void> logout() async {
+    await GoogleSignIn(scopes: ['email']).signOut();
+    await firebaseLogout();
+  }
 }
 
-void firebaseLogout({void Function()? callback}) {
-  FirebaseAuth.instance.signOut().then((_) {
-    callback?.call();
-  });
+Future<void> firebaseLogout({void Function()? callback}) async {
+  await FirebaseAuth.instance.signOut();
 }

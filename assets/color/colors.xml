@@ -10,4 +10,6 @@
     <color name="grey99">#999999</color>
     <color name="grey66">#666666</color>
     <color name="greyF0">#F0F0F0</color>
+
+    <color name="error">#F4406B</color>
 </resources>

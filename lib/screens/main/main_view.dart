@@ -23,6 +23,7 @@ class _MainViewState extends State<MainView> {
     final icons = getBottomIcons(page);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: IndexedStack(
         index: page,
         children: const [

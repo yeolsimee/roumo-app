@@ -45,15 +45,10 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
     );
   }
 
-  void logout({void Function()? callback}) {
-    FirebaseAuth.instance.signOut().then(
-          (value) => Google.logout(
-            callback: () {
-              state = const Result.empty();
-              callback?.call();
-            },
-          ),
-        );
+  Future<void> logout() async {
+    await FirebaseAuth.instance.signOut();
+    await Google.logout();
+    state = const Result.empty();
   }
 
   // ignore: avoid_positional_boolean_parameters
@@ -92,5 +87,24 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
     } else {
       state = const Result.error('로그인 정보 없음');
     }
+  }
+
+  void deleteUser(void Function() callback) {
+    userApi.when(
+      data: (api) async {
+        final result = await api.withdraw();
+        await result.whenOrNull(
+          success: (data) async {
+            await logout();
+            callback();
+          },
+          error: (e) {
+            Log.e(e);
+          },
+        );
+      },
+      loading: () {},
+      error: (e, s) {},
+    );
   }
 }

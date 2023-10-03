@@ -14,5 +14,12 @@
   "notice": "알림",
   "terms_of_service": "이용 약관",
   "privacy_policy": "개인정보 처리방침",
-  "logout": "로그아웃"
+  "logout": "로그아웃",
+  "memberLeave": "회원탈퇴",
+  "memberLeaveDetail": "지금 탈퇴하시면 모든 루틴들이 사라져요!",
+  "giveUp": "역시 그만둘래요",
+  "logoutMessage": "계정을 로그아웃 하시겠어요?",
+  "cancel": "취소",
+  "plan_to_update": "업데이트 예정이에요",
+  "plan_to_update_detail": "추후 업데이트 예정이니 조금만 기다려주세요"
 }

@@ -14,5 +14,12 @@
   "notice": "Notice",
   "terms_of_service": "Terms of Service",
   "privacy_policy": "Privacy Policy",
-  "logout": "Logout"
+  "logout": "Logout",
+  "memberLeave": "Leave",
+  "memberLeaveDetail": "If you leave, all data will be deleted.",
+  "giveUp": "Cancel",
+  "logoutMessage": "Are you sure you want to log out?",
+  "cancel": "Cancel",
+  "plan_to_update": "Plan to update",
+  "plan_to_update_detail": "We are preparing to update the service. Please wait a little longer."
 }

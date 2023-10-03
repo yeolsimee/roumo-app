@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roumo_flutter/entity/api_response.dart';
 import 'package:roumo_flutter/entity/result.dart';
@@ -18,7 +16,6 @@ final userApiProvider = FutureProvider<UserApi>((ref) async {
 });
 
 class UserApi {
-
   UserApi(this._dio);
 
   final Dio _dio;
@@ -27,10 +24,8 @@ class UserApi {
     final firebaseToken = await getFirebaseToken();
 
     try {
-      final response = await _dio.post<dynamic>(
-        '/login',
-        options: Options(headers: {'x-auth': firebaseToken})
-      );
+      final response = await _dio.post<dynamic>('/login',
+          options: Options(headers: {'x-auth': firebaseToken}));
       if (response.statusCode == 200) {
         final body = response.data;
         final data = ApiResponse.fromDynamic(body).data;
@@ -74,10 +69,18 @@ class UserApi {
     if (response.statusCode == 200) {
       final body = response.data;
       final data = ApiResponse.fromDynamic(body).data;
-      Log.i(data);
       return Result.success(ApiUser.fromJson(data));
     }
-    Log.e(response);
     return const Result.error('회원가입에 실패했습니다.');
+  }
+
+  Future<Result<bool>> withdraw() async {
+    final response = await _dio.post<dynamic>(
+      '/withdraw',
+    );
+    if (response.statusCode == 200) {
+      return const Result.success(true);
+    }
+    return const Result.error('회원탈퇴에 실패했습니다.');
   }
 }
