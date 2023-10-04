@@ -66,4 +66,5 @@ class Google {
 
 Future<void> firebaseLogout({void Function()? callback}) async {
   await FirebaseAuth.instance.signOut();
+  callback?.call();
 }

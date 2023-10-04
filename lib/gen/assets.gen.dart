@@ -9,16 +9,6 @@
 
 import 'package:flutter/widgets.dart';
 
-class $AssetsIconGen {
-  const $AssetsIconGen();
-
-  /// File path: assets/icon/icon.png
-  AssetGenImage get icon => const AssetGenImage('assets/icon/icon.png');
-
-  /// List of all assets
-  List<AssetGenImage> get values => [icon];
-}
-
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -78,6 +68,10 @@ class $AssetsImagesGen {
   AssetGenImage get smallRightArrow =>
       const AssetGenImage('assets/images/small_right_arrow.png');
 
+  /// File path: assets/images/splash_logo.png
+  AssetGenImage get splashLogo =>
+      const AssetGenImage('assets/images/splash_logo.png');
+
   /// File path: assets/images/toggle_off.svg
   String get toggleOff => 'assets/images/toggle_off.svg';
 
@@ -103,6 +97,7 @@ class $AssetsImagesGen {
         naver,
         readyImage,
         smallRightArrow,
+        splashLogo,
         toggleOff,
         toggleOn
       ];
@@ -111,7 +106,6 @@ class $AssetsImagesGen {
 class Assets {
   Assets._();
 
-  static const $AssetsIconGen icon = $AssetsIconGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 

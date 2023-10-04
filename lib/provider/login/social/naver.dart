@@ -1,6 +1,7 @@
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_naver_login/flutter_naver_login.dart';
+import 'package:roumo_flutter/provider/login/social/google.dart';
 import 'package:roumo_flutter/utils/logger.dart';
 
 class Naver {
@@ -46,6 +47,7 @@ class Naver {
     } else {
       Log.e('네이버 로그아웃 실패: ${result.status.name}');
     }
+    await firebaseLogout();
   }
 }
 

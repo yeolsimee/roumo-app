@@ -48,8 +48,16 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
   }
 
   Future<void> logout() async {
-    await FirebaseAuth.instance.signOut();
-    await Google.logout();
+    final prefs = await SharedPreferences.getInstance();
+    final loginType = prefs.getString('loginType') ?? '';
+    switch (loginType) {
+      case 'google':
+        await Google.logout();
+      case 'naver':
+        await Naver.logout();
+      default:
+        await firebaseLogout();
+    }
     state = const Result.empty();
   }
 

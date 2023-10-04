@@ -1,8 +1,5 @@
-import 'dart:async';
-
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roumo_flutter/const/secret_consts.dart';
 
@@ -16,7 +13,6 @@ final dioProvider = FutureProvider<Dio>((ref) async {
     );
   }
   final firebaseToken = await currentUser.getIdToken(true);
-  unawaited(Clipboard.setData(ClipboardData(text: firebaseToken ?? '')));
 
   return Dio(
     BaseOptions(
