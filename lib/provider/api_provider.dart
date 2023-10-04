@@ -22,6 +22,7 @@ final dioProvider = FutureProvider<Dio>((ref) async {
     BaseOptions(
       baseUrl: apiServerBaseUrl,
       headers: {'x-auth': firebaseToken, 'Content-Type': 'application/json'},
+      connectTimeout: const Duration(seconds: 30),
     ),
   );
 });

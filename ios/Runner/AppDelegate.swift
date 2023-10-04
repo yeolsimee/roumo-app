@@ -1,6 +1,7 @@
 import UIKit
 import Flutter
 import Firebase
+import NaverThirdPartyLogin
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -12,4 +13,13 @@ import Firebase
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
+
+  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+      if url.absoluteString.contains("thirdPartyLoginResult") {
+        NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
+        return true
+      } else {
+        return true
+      }
+    }
 }

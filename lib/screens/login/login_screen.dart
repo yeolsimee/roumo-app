@@ -46,7 +46,11 @@ class LoginScreen extends ConsumerWidget {
           children: [
             Center(child: Assets.images.loginImage.image()),
             85.verticalSpace,
-            NaverButton(onClick: () {}),
+            NaverButton(
+              onClick: () {
+                ref.read(loginProvider.notifier).login(LoginType.naver);
+              },
+            ),
             8.verticalSpace,
             GoogleButton(
               onClick: () {
@@ -60,7 +64,9 @@ class LoginScreen extends ConsumerWidget {
                 text: Intl.message('loginWithApple'),
                 height: 48,
                 iconAlignment: IconAlignment.left,
-                onPressed: () {},
+                onPressed: () {
+                  ref.read(loginProvider.notifier).login(LoginType.apple);
+                },
               ),
             ),
             60.verticalSpace,

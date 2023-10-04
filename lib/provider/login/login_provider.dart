@@ -5,7 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roumo_flutter/entity/result.dart';
 import 'package:roumo_flutter/entity/user/roumo_user.dart';
 import 'package:roumo_flutter/provider/login/login_type.dart';
+import 'package:roumo_flutter/provider/login/social/apple.dart';
 import 'package:roumo_flutter/provider/login/social/google.dart';
+import 'package:roumo_flutter/provider/login/social/naver.dart';
 import 'package:roumo_flutter/provider/login/user_api.dart';
 import 'package:roumo_flutter/utils/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -32,9 +34,9 @@ class LoginProvider extends StateNotifier<Result<RoumoUser>> {
       case LoginType.google:
         Google.login().then(sendResult);
       case LoginType.apple:
-        break;
+        Apple.login().then(sendResult);
       case LoginType.naver:
-        break;
+        Naver.login().then(sendResult);
     }
   }
 
