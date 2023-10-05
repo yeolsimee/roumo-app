@@ -8,6 +8,7 @@ import 'package:roumo_flutter/const/url_consts.dart';
 import 'package:roumo_flutter/gen/assets.gen.dart';
 import 'package:roumo_flutter/gen/colors.gen.dart';
 import 'package:roumo_flutter/provider/login/login_provider.dart';
+import 'package:roumo_flutter/provider/notification/alarm_provider.dart';
 import 'package:roumo_flutter/routes.dart';
 import 'package:roumo_flutter/ui/dialog/delete_user_dialog.dart';
 import 'package:roumo_flutter/ui/dialog/logout_dialog.dart';
@@ -19,7 +20,7 @@ class MyPageScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var alarmState = false;
+    final alarmState = ref.watch(alarmProvider);
     final notifier = ref.read(loginProvider.notifier);
 
     return SafeArea(
@@ -33,7 +34,12 @@ class MyPageScreen extends ConsumerWidget {
             ),
             6.verticalSpace,
             28.verticalSpace,
-            AlarmItem(alarmState: alarmState, onTap: () {}),
+            AlarmItem(
+              alarmState: alarmState,
+              onTap: () {
+                ref.read(alarmProvider.notifier).toggleAlarm();
+              },
+            ),
             28.verticalSpace,
             ServiceItem(
               onTap: () => launchUrlString(UrlConsts.agreementUrl),
