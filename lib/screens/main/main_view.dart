@@ -98,7 +98,10 @@ class _MainViewState extends State<MainView> with WidgetsBindingObserver {
                         height: 20.w,
                       ),
                     ),
-                    Text(Intl.message('routineRecommend'), style: textStyleBy(1)),
+                    Text(
+                      Intl.message('routineRecommend'),
+                      style: textStyleBy(1),
+                    ),
                   ],
                 ),
               ),
@@ -174,8 +177,8 @@ class _MainViewState extends State<MainView> with WidgetsBindingObserver {
   }
 
   void Function() onTapPage(int page) => () {
-    setState(() {
-      this.page = page;
-    });
-  };
+        setState(() {
+          this.page = page;
+        });
+      };
 }

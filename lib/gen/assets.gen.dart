@@ -12,6 +12,9 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/btn_add.svg
+  String get btnAdd => 'assets/images/btn_add.svg';
+
   /// File path: assets/images/google.svg
   String get google => 'assets/images/google.svg';
 
@@ -80,6 +83,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        btnAdd,
         google,
         homeLogo,
         iconArrowOpen,
