@@ -28,8 +28,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/icon_backarrow.svg
   String get iconBackarrow => 'assets/images/icon_backarrow.svg';
 
+  /// File path: assets/images/icon_calendar.svg
+  String get iconCalendar => 'assets/images/icon_calendar.svg';
+
   /// File path: assets/images/icon_check.svg
   String get iconCheck => 'assets/images/icon_check.svg';
+
+  /// File path: assets/images/icon_extend.svg
+  String get iconExtend => 'assets/images/icon_extend.svg';
 
   /// File path: assets/images/icon_home_off.svg
   String get iconHomeOff => 'assets/images/icon_home_off.svg';
@@ -88,7 +94,9 @@ class $AssetsImagesGen {
         homeLogo,
         iconArrowOpen,
         iconBackarrow,
+        iconCalendar,
         iconCheck,
+        iconExtend,
         iconHomeOff,
         iconHomeOn,
         iconMypageOff,

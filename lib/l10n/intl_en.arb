@@ -21,5 +21,14 @@
   "logoutMessage": "Are you sure you want to log out?",
   "cancel": "Cancel",
   "plan_to_update": "Plan to update",
-  "plan_to_update_detail": "We are preparing to update the service. Please wait a little longer."
+  "plan_to_update_detail": "We are preparing to update the service. Please wait a little longer.",
+  "day_of_week_1": "Mon",
+  "day_of_week_2": "Tue",
+  "day_of_week_3": "Wed",
+  "day_of_week_4": "Thu",
+  "day_of_week_5": "Fri",
+  "day_of_week_6": "Sat",
+  "day_of_week_7": "Sun",
+  "year": ".",
+  "month": ""
 }

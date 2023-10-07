@@ -21,5 +21,14 @@
   "logoutMessage": "계정을 로그아웃 하시겠어요?",
   "cancel": "취소",
   "plan_to_update": "업데이트 예정이에요",
-  "plan_to_update_detail": "추후 업데이트 예정이니 조금만 기다려주세요"
+  "plan_to_update_detail": "추후 업데이트 예정이니 조금만 기다려주세요",
+  "day_of_week_1": "월",
+  "day_of_week_2": "화",
+  "day_of_week_3": "수",
+  "day_of_week_4": "목",
+  "day_of_week_5": "금",
+  "day_of_week_6": "토",
+  "day_of_week_7": "일",
+  "year": "년",
+  "month": "월"
 }

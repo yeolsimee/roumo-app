@@ -269,6 +269,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Mon`
+  String get day_of_week_1 {
+    return Intl.message(
+      'Mon',
+      name: 'day_of_week_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue`
+  String get day_of_week_2 {
+    return Intl.message(
+      'Tue',
+      name: 'day_of_week_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get day_of_week_3 {
+    return Intl.message(
+      'Wed',
+      name: 'day_of_week_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thu`
+  String get day_of_week_4 {
+    return Intl.message(
+      'Thu',
+      name: 'day_of_week_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get day_of_week_5 {
+    return Intl.message(
+      'Fri',
+      name: 'day_of_week_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get day_of_week_6 {
+    return Intl.message(
+      'Sat',
+      name: 'day_of_week_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get day_of_week_7 {
+    return Intl.message(
+      'Sun',
+      name: 'day_of_week_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `.`
+  String get year {
+    return Intl.message(
+      '.',
+      name: 'year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get month {
+    return Intl.message(
+      '',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

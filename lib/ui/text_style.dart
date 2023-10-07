@@ -30,6 +30,13 @@ final style16Normal = TextStyle(
   letterSpacing: -0.1.sp,
 );
 
+final style15Bold = TextStyle(
+  color: ColorName.black33,
+  fontSize: 15.sp,
+  fontWeight: FontWeight.w700,
+  letterSpacing: -0.1.sp,
+);
+
 final style15Normal = TextStyle(
   color: ColorName.black33,
   fontSize: 15.sp,
@@ -48,6 +55,13 @@ final style14NormalGrey = TextStyle(
   color: ColorName.grey66,
   fontSize: 14.sp,
   fontWeight: FontWeight.w500,
+  letterSpacing: -0.1.sp,
+);
+
+final style12Normal = TextStyle(
+  color: Colors.black,
+  fontSize: 12.sp,
+  fontWeight: FontWeight.w600,
   letterSpacing: -0.1.sp,
 );
 

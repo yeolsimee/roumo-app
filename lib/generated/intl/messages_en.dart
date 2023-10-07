@@ -32,6 +32,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "agreementTitle":
             MessageLookupByLibrary.simpleMessage("Terms of Service"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "day_of_week_1": MessageLookupByLibrary.simpleMessage("Mon"),
+        "day_of_week_2": MessageLookupByLibrary.simpleMessage("Tue"),
+        "day_of_week_3": MessageLookupByLibrary.simpleMessage("Wed"),
+        "day_of_week_4": MessageLookupByLibrary.simpleMessage("Thu"),
+        "day_of_week_5": MessageLookupByLibrary.simpleMessage("Fri"),
+        "day_of_week_6": MessageLookupByLibrary.simpleMessage("Sat"),
+        "day_of_week_7": MessageLookupByLibrary.simpleMessage("Sun"),
         "giveUp": MessageLookupByLibrary.simpleMessage("Cancel"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "loginWithApple":
@@ -46,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "memberLeave": MessageLookupByLibrary.simpleMessage("Leave"),
         "memberLeaveDetail": MessageLookupByLibrary.simpleMessage(
             "If you leave, all data will be deleted."),
+        "month": MessageLookupByLibrary.simpleMessage(""),
         "myPage": MessageLookupByLibrary.simpleMessage("My Page"),
         "notice": MessageLookupByLibrary.simpleMessage("Notice"),
         "plan_to_update":
@@ -56,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "routineRecommend": MessageLookupByLibrary.simpleMessage("Recommend"),
         "terms_of_service":
-            MessageLookupByLibrary.simpleMessage("Terms of Service")
+            MessageLookupByLibrary.simpleMessage("Terms of Service"),
+        "year": MessageLookupByLibrary.simpleMessage(".")
       };
 }
