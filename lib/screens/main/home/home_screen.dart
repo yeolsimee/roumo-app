@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 import 'package:roumo_flutter/gen/assets.gen.dart';
 import 'package:roumo_flutter/provider/calendar/selected_month_provider.dart';
 import 'package:roumo_flutter/routes.dart';
@@ -47,7 +48,8 @@ class HomeScreen extends ConsumerWidget {
                   ),
                 ),
                 16.verticalSpace,
-                CalendarView(dateTime),
+                DayOfWeeks(),
+                Center(child: CalendarView(dateTime)),
               ],
             ),
           ),
@@ -66,6 +68,28 @@ class HomeScreen extends ConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget DayOfWeeks() {
+    const key = 'day_of_week';
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 28.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(
+          7,
+              (index) => DayOfWeek(Intl.message('${key}_${index + 1}')),
+        ),
+      ),
+    );
+  }
+
+  Widget DayOfWeek(String text) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 9.w),
+      child: Text(text, style: style12Normal),
     );
   }
 }
